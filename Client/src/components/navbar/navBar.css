@@ -1,0 +1,7 @@
+.navbar{
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del eje principal (horizontal) */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #333;
+    overflow: hidden;
+}
