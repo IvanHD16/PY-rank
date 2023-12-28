@@ -1,17 +1,17 @@
 require('dotenv').config();
 const express = require('express');
-const sequelize = require ('./config/sequelize.config');
-const User = require('./models/user');
-const Post = require('./models/post');
-const apiRoutes = require('./routes/api');
+const sequelize = require ('./src/config/sequelize.config');
+const apiRoutes = require('./src/routes/api');
 const app = express();
 
 
 // Configuración de middlewares, rutas, etc.
+app.use(express.json());
+
 app.use('/api', apiRoutes);
 
 // Sincronizar modelos con la base de datos
-sequelize.sync({force: falce}).then(()=>{
+sequelize.sync({force: false}).then(()=>{
     console.log('Base de datos sincronizada');
 
     const PORT = process.env.PORT || 3001;
