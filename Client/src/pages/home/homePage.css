@@ -1,0 +1,39 @@
+.content-home{
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-right: 200px; /* Resta el ancho de la barra lateral */
+}
+
+.search-container {
+    display: flex;
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+  
+  input[type="search"] {
+    flex: 1; /* El input toma todo el espacio disponible */
+    padding: 8px; /* Ajusta el relleno según tus necesidades */
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Ajusta el relleno según tus necesidades */
+    cursor: pointer;
+  }
+
+  .nueva-votacion{
+    position: fixed;
+    top: 100px;
+    right: 300px;
+    margin: 20px;
+    border: 5px solid;
+    width: auto; /* Cambiado a 'auto' para que se ajuste al contenido */
+    min-width: 30px; /* Puedes ajustar esto según sea necesario */
+    height: 30px;
+    padding: 10px;
+  }
+  

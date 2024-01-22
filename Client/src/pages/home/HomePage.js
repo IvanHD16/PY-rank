@@ -1,36 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RightBar from '../../components/rightBar/RightBar';
+import './homePage.css'
+
 
 const HomePage = () => {
   return (
     <div>
-
+      <RightBar />
       <main>
-        <section>
-          <h2>Bienvenido a Tu Página</h2>
-          {/* Aquí puedes agregar contenido adicional para dar la bienvenida */}
-        </section>
+        <div className='content-home'>
+          <section>
+            <div class="search-container">
+              <input type="search" placeholder="Buscar..."/>
+              <button type="submit">Buscar</button>
+            </div>
+          </section>
 
-        <section>
-          <h2>Búsqueda</h2>
-          {/* Agrega tu componente de búsqueda aquí */}
-        </section>
+          <section>
+            <h2>Bienvenido...</h2>
+            {/* Aquí puedes agregar contenido adicional para dar la bienvenida */}
+          </section>
 
-        <section>
-          <h2>Rankings Populares</h2>
-          {/* Agrega el componente de rankings populares aquí */}
-        </section>
+          <section>
+            <h2>Rankings Populares</h2>
+            {/* Agrega el componente de rankings populares aquí */}
+          </section>
 
-        <section>
-          <h2>Categorías de Rankings</h2>
-          {/* Agrega el componente de categorías de rankings aquí */}
-        </section>
 
-        <section>
-          <h2>Crear Nueva Votación</h2>
-          {/* Agrega el componente para crear una nueva votación aquí */}
-          <Link to="/crear-votacion">Ir a Crear Nueva Votación</Link>
-        </section>
+
+          <section className='nueva-votacion'>
+            <Link to="/crear-votacion" style={{ textDecoration: 'none' }}><button>Nueva votación</button></Link>
+          </section>
+        </div>
       </main>
 
       <footer>
