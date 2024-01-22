@@ -10,27 +10,24 @@ const HomePage = () => {
       <RightBar />
       <main>
         <div className='content-home'>
-          <section>
+          <section className='first-line'>
             <div class="search-container">
               <input type="search" placeholder="Buscar..."/>
               <button type="submit">Buscar</button>
             </div>
+            <div className='nueva-votacion'>
+            <Link to="/crear-votacion" style={{ textDecoration: 'none' }}><button>Nueva votación</button></Link>
+          </div>
           </section>
 
           <section>
-            <h2>Bienvenido...</h2>
+            <h2>Bienvenido a TopRankingsHub</h2>
             {/* Aquí puedes agregar contenido adicional para dar la bienvenida */}
           </section>
 
           <section>
             <h2>Rankings Populares</h2>
             {/* Agrega el componente de rankings populares aquí */}
-          </section>
-
-
-
-          <section className='nueva-votacion'>
-            <Link to="/crear-votacion" style={{ textDecoration: 'none' }}><button>Nueva votación</button></Link>
           </section>
         </div>
       </main>
