@@ -32,10 +32,9 @@ const HomePage = () => {
         </div>
       </main>
 
-      <footer>
+      {/* <footer>
         <p>Tu pie de página</p>
-        {/* Otras opciones de diseño y estilo para el pie de página */}
-      </footer>
+      </footer> */}
     </div>
   );
 };

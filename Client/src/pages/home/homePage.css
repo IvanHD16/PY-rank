@@ -1,4 +1,6 @@
+
 .content-home {
+  background-color: #0CC0DF;
   display: block;
   text-align: center;
   box-sizing: border-box;
@@ -17,7 +19,7 @@
   /* Ajusta el ancho máximo según tus necesidades */
   margin: 0 auto;
   /* Centra el contenedor */
-  border: 5px solid;
+  border: 2px solid;
   padding: 10px;
 }
 
@@ -32,6 +34,7 @@ button {
   background-color: #333;
   color: white;
   border: none;
+  border-radius: 50%;
   padding: 8px 12px;
   /* Ajusta el relleno según tus necesidades */
   cursor: pointer;
@@ -42,7 +45,8 @@ button {
   top: 100px;
   right: 300px;
   margin: 20px;
-  border: 5px solid;
+  border: 2px solid;
+  border-radius: 50%;
   width: auto;
   /* Cambiado a 'auto' para que se ajuste al contenido */
   min-width: 30px;
