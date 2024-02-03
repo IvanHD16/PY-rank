@@ -1,27 +1,24 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/sequelize.config');
-const User = require('./user');
+const { v4: UUIDV4 } = require('uuid');
 
-const Post = sequelize.define('Post', {
-  postId: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
-    primaryKey: true, 
-  },
-  postName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: false,
-  },
-  description: {
-    type: DataTypes.TEXT,
-  },
-  options: {
-    type: DataTypes.ARRAY(DataTypes.STRING)
-  },
-  // Otras columnas del modelo Post
-});
-
-Post.belongsTo(User);
-
-module.exports = Post;
+module.exports = (sequelize)=>{
+  sequelize.define('Post', {
+    postId: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true, 
+    },
+    postName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+    },
+    description: {
+      type: DataTypes.TEXT,
+    },
+    options: {
+      type: DataTypes.ARRAY(DataTypes.STRING) 
+    },
+    // Otras columnas del modelo Post
+  });
+}
