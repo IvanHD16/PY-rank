@@ -2,9 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RightBar from '../../components/rightBar/RightBar';
 import './homePage.css'
+import { useSelector } from 'react-redux';
 
 
 const HomePage = () => {
+
+  const topRankings = useSelector((state)=>state.topRankings)
+
   return (
     <div>
       <RightBar />
@@ -27,7 +31,15 @@ const HomePage = () => {
 
           <section>
             <h2>Rankings Populares</h2>
-            {/* Agrega el componente de rankings populares aquí */}
+            <ul>
+              {topRankings.map((ranking, index) => (
+                <li key={index}>
+                  <Link to={`/ranking/${ranking.id}`}>
+                    {ranking.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
       </main>

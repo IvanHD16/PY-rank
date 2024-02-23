@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
 // Componentes para las rutas
-import LandingPage from '../src/pages/landing/LandingPage';
 import HomePage from '../src/pages/home/HomePage';
 import Navbar from './components/navbar/NavBar';
 
